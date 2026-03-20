@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<!-- ===================================================== -->
+<!-- METADATA WEBSITE -->
+<!-- ===================================================== -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rajawali 9 Garment</title>
+
+<!-- FONT GOOGLE -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- ===================================================== -->
+<!-- STYLE WEBSITE -->
+<!-- ===================================================== -->
+
+<style>
+
+.hero-img{
+width:100%;
+max-width:900px;
+opacity:0.85;
+margin:0 auto 30px auto;
+display:block;
+border-radius:10px;
+}
+
+/* RESET DASAR WEBSITE */
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+/* STYLE BODY */
+body{
+font-family:'Poppins',sans-serif;
+background:#f5f6f8;
+color:#1f2937;
+}
+
+/* ===================================================== */
+/* NAVBAR */
+/* ===================================================== */
+
+nav{
+position:sticky;
+top:0;
+background:white;
+padding:18px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 12px rgba(0,0,0,0.05);
+z-index:10;
+}
+
+.logo{
+font-weight:700;
+font-size:22px;
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#374151;
+cursor:pointer;
+font-weight:500;
+}
+
+/* ===================================================== */
+/* LAYOUT UTAMA */
+/* ===================================================== */
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:50px 25px;
+}
+
+.hidden{
+display:none;
+}
+
+/* ===================================================== */
+/* HERO / HALAMAN DEPAN */
+/* ===================================================== */
+
+.hero{
+text-align:center;
+padding:100px 20px;
+background:linear-gradient(120deg,#111,#333);
+color:white;
+border-radius:18px;
+}
+
+.hero h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+.hero p{
+margin-bottom:25px;
+opacity:0.9;
+}
+
+.btn{
+padding:12px 24px;
+border:none;
+border-radius:10px;
+background:white;
+color:black;
+cursor:pointer;
+font-weight:500;
+}
+
+/* ===================================================== */
+/* GRID KATALOG PRODUK */
+/* ===================================================== */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:22px;
+}
+
+.card{
+background:white;
+border-radius:16px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+display:flex;
+flex-direction:column;
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card-body{
+padding:18px;
+display:flex;
+flex-direction:column;
+flex:1;
+}
+
+.card-body h3{
+margin-bottom:6px;
+}
+
+.price{
+color:#6b7280;
+margin-bottom:15px;
+}
+
+.btn-row{
+display:flex;
+gap:8px;
+margin-top:auto;
+}
+
+.detail-btn{
+flex:1;
+border:none;
+padding:10px;
+border-radius:8px;
+background:#111;
+color:white;
+cursor:pointer;
+}
+
+.buy-btn{
+flex:1;
+border:none;
+padding:10px;
+border-radius:8px;
+background:#25D366;
+color:white;
+cursor:pointer;
+}
+
+/* ===================================================== */
+/* MODAL / POPUP */
+/* ===================================================== */
+
+.modal{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+display:flex;
+justify-content:center;
+align-items:center;
+visibility:hidden;
+padding:20px;
+}
+
+.modal.show{
+visibility:visible;
+}
+
+.modal-content{
+background:white;
+padding:25px;
+border-radius:16px;
+max-width:420px;
+width:100%;
+}
+
+.modal img{
+width:100%;
+border-radius:12px;
+margin-bottom:12px;
+}
+
+.modal-desc{
+font-size:14px;
+color:#555;
+margin-top:6px;
+line-height:1.5;
+}
+
+.form-row{
+margin-top:15px;
+}
+
+.form-row label{
+font-size:13px;
+color:#555;
+}
+
+select,input[type=number]{
+width:100%;
+padding:10px;
+margin-top:5px;
+border-radius:8px;
+border:1px solid #ddd;
+}
+
+.modal-buy{
+margin-top:18px;
+width:100%;
+background:#25D366;
+color:white;
+border:none;
+padding:12px;
+border-radius:10px;
+cursor:pointer;
+font-weight:500;
+}
+
+footer{
+text-align:center;
+padding:40px;
+color:#6b7280;
+}
+
+/* ===================================================== */
+/* SLIDER KONTAK 5 FOTO */
+/* ===================================================== */
+
+.contact-slider{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:15px;
+margin-top:100px;
+margin-bottom:30px;
+}
+
+/* semua gambar */
+.slide-img{
+width:140px;
+height:140px;
+object-fit:cover;
+border-radius:12px;
+transition:all 0.8s ease;
+}
+
+/* gambar paling luar */
+.far{
+opacity:0.25;
+transform:scale(0.8);
+}
+
+/* gambar tengah samping */
+.mid{
+opacity:0.55;
+transform:scale(0.95);
+}
+
+/* gambar fokus */
+.center{
+width:180px;
+height:180px;
+opacity:1;
+transform:scale(1.15);
+box-shadow:0 12px 30px rgba(0,0,0,0.25);
+z-index:2;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ===================================================== -->
+<!-- NAVBAR WEBSITE -->
+<!-- ===================================================== -->
+
+<nav>
+<div class="logo">Rajawali 9 Garment</div>
+
+<div class="nav-links">
+<a onclick="showPage('home')">Home</a>
+<a onclick="showPage('catalog')">Katalog</a>
+<a onclick="showPage('contact')">Kontak</a>
+<a onclick="openLogin()">Owner</a>
+</div>
+</nav>
+
+
+<!-- ===================================================== -->
+<!-- HALAMAN HOME -->
+<!-- ===================================================== -->
+
+<div id="home" class="container">
+
+<div class="hero">
+<img src="images/baret lain.jpeg" class="hero-img">
+<h1>Rajawali 9 Garment</h1>
+<p>Produksi Baret Berkualitas Grosir dan Eceran</p>
+<button class="btn" onclick="showPage('catalog')">Lihat Katalog</button>
+</div>
+
+</div>
+
+
+<!-- ===================================================== -->
+<!-- HALAMAN KATALOG -->
+<!-- ===================================================== -->
+
+<div id="catalog" class="container hidden">
+
+<h2 style="margin-bottom:25px">Katalog Produk</h2>
+
+<!-- GRID TEMPAT SEMUA PRODUK -->
+<div class="grid">
+
+<!-- ===================================================== -->
+<!-- PRODUK 1 -->
+<!-- COPY BLOK INI UNTUK PRODUK BARU -->
+<!-- ===================================================== -->
+
+<div class="card" data-name="Baret PM Biru">
+<img src="images/baret biru.jpeg">
+
+<div class="card-body">
+<h3>Baret PM Biru</h3>
+<p class="price">Rp27.000</p>
+
+<div class="btn-row">
+
+<!-- TOMBOL DETAIL (HANYA LIHAT INFO PRODUK) -->
+<button class="detail-btn"
+onclick="openDetail('BARET PM BIRU','Rp27.000','images/baret biru.jpeg','Baret dengan bahan dan kualitas premium. Menerima pemesanan satuan maupun grosir, hubungi kami.')">
+Detail
+</button>
+
+<!-- TOMBOL BELI (PILIH UKURAN DAN JUMLAH) -->
+<button class="buy-btn"
+onclick="openOrder('Baret PM BIRU','Rp27.000','images/baret biru.jpeg')">
+Beli
+</button>
+
+</div>
+</div>
+</div>
+
+<!-- ===================================================== -->
+<!-- PRODUK 2 - 18 (BISA DIUBAH SESUAI PRODUK) -->
+<!-- ===================================================== -->
+
+<!-- PRODUK 2 -->
+<div class="card" data-name="Baret PPM">
+<img src="images/baret hijau.jpeg">
+<div class="card-body">
+<h3>Hijau PPM</h3>
+<p class="price">Rp27.000</p>
+<div class="btn-row">
+<button class="detail-btn" onclick="openDetail('Baret Hijau PPM','Rp27.000','images/baret hijau.jpeg','Baret dengan bahan dan kualitas premium. Menerima pemesanan satuan maupun grosir, hubungi kami.')">Detail</button>
+<button class="buy-btn" onclick="openOrder('Baret Hijau','Rp27.000','images/baret hijau.jpeg')">Beli</button>
+</div>
+</div>
+</div>
+
+<!-- PRODUK 3 -->
+<div class="card" data-name="Biru Brimob">
+<img src="images/baret navy.jpeg">
+<div class="card-body">
+<h3>Biru Brimob</h3>
+<p class="price">Rp27.000</p>
+<div class="btn-row">
+<button class="detail-btn" onclick="openDetail('Biru Brimob','Rp27.000','images/biru navy.jpeg','Baret dengan bahan dan kualitas premium. Menerima pemesanan satuan maupun grosir, hubungi kami.')">Detail</button>
+<button class="buy-btn" onclick="openOrder('Biru Brimob','Rp27.000','images/biru navy.jpg')">Beli</button>
+</div>
+</div>
+</div>
+
+<!-- PRODUK 4 -->
+<div class="card" data-name="Baret Merah">
+<img src="images/baret merah.jpeg">
+<div class="card-body">
+<h3>Baret Merah</h3>
+<p class="price">Rp27.000</p>
+<div class="btn-row">
+<button class="detail-btn" onclick="openDetail('Baret Merah','Rp27.000','images/baret merah.jpeg','Baret dengan bahan dan kualitas premium. Menerima pemesanan satuan maupun grosir, hubungi kami.')">Detail</button>
+<button class="buy-btn" onclick="openOrder('Baret Merah','Rp27.000','images/baret merah.jpeg')">Beli</button>
+</div>
+</div>
+</div>
+
+<!-- PRODUK 5 -->
+<div class="card" data-name="Baret Pramuka">
+<img src="images/baret coklat.jpeg">
+<div class="card-body">
+<h3>Baret Pramuka</h3>
+<p class="price">Rp27.000</p>
+<div class="btn-row">
+<button class="detail-btn" onclick="openDetail('Baret Pramuka','Rp27.000','images/baret coklat.jpeg','Baret dengan bahan dan kualitas premium. Menerima pemesanan satuan maupun grosir, hubungi kami.')">Detail</button>
+<button class="buy-btn" onclick="openOrder('Baret Pramuka','Rp27.000','images/baret coklat.jpeg')">Beli</button>
+</div>
+</div>
+</div>
+
+<!-- PRODUK 6 -->
+<div class="card" data-name="Baret Hitam">
+<img src="images/baret hitam.jpeg">
+<div class="card-body">
+<h3>Baret Hitam</h3>
+<p class="price">Rp27.000</p>
+<div class="btn-row">
+<button class="detail-btn" onclick="openDetail('Baret Hitam','Rp27.000','Baret dengan bahan dan kualitas premium. Menerima pemesanan satuan maupun grosir, hubungi kami.')">Detail</button>
+<button class="buy-btn" onclick="openOrder('Baret Hitam','Rp27.000','images/baret hitam.jpeg')">Beli</button>
+</div>
+</div>
+</div>
+
+<!-- PRODUK 7 -->
+<div class="card" data-name="Baret Ungu">
+<img src="images/baret ungu.jpeg">
+<div class="card-body">
+<h3>Baret Ungu</h3>
+<p class="price">Rp27.000</p>
+<div class="btn-row">
+<button class="detail-btn" onclick="openDetail('Baret Ungu','Rp27.000','images/baret ungu.jpg','Baret dengan bahan dan kualitas premium. Menerima pemesanan satuan maupun grosir, hubungi kami.')">Detail</button>
+<button class="buy-btn" onclick="openOrder('Baret Ungu','Rp27.000','images/baret ungu.jpeg')">Beli</button>
+</div>
+</div>
+</div>
+
+<!-- PRODUK 8 -->
+<div class="card" data-name="Baret Pemuda Pancasila">
+<img src="images/baret orange.jpeg">
+<div class="card-body">
+<h3>Baret Pemuda Pancasila</h3>
+<p class="price">Rp27.000</p>
+<div class="btn-row">
+<button class="detail-btn" onclick="openDetail('Baret Orange','Rp27.000','images/baret orange.jpg','Baret dengan bahan dan kualitas premium. Menerima pemesanan satuan maupun grosir, hubungi kami.')">Detail</button>
+<button class="buy-btn" onclick="openOrder('Baret Orange','Rp27.000','images/baret orange.jpg')">Beli</button>
+</div>
+</div>
+</div>
+
+<!-- PRODUK 9 -->
+<div class="card" data-name="Baret Kopassus">
+<img src="images/baret maroon.jpeg">
+<div class="card-body">
+<h3>Baret Kopassus</h3>
+<p class="price">Rp27.000</p>
+<div class="btn-row">
+<button class="detail-btn" onclick="openDetail('Baret Kopassus','Rp27.000','images/baret maroon.jpeg','Baret dengan bahan dan kualitas premium. Menerima pemesanan satuan maupun grosir, hubungi kami.')">Detail</button>
+<button class="buy-btn" onclick="openOrder('Baret Kopassus','Rp27.000','images/baret maroon.jpeg')">Beli</button>
+</div>
+</div>
+</div>
+
+<!-- PRODUK 10 -->
+<div class="card" data-name="Baret Satpol PP">
+<img src="images/baret cream.jpeg">
+<div class="card-body">
+<h3>Baret Satpol PP</h3>
+<p class="price">Rp27.000</p>
+<div class="btn-row">
+<button class="detail-btn" onclick="openDetail('Baret Satpol PP','Rp27.000','images/baret cream.jpeg','Baret dengan bahan dan kualitas premium. Menerima pemesanan satuan maupun grosir, hubungi kami')">Detail</button>
+<button class="buy-btn" onclick="openOrder('Baret Satpol PP','Rp27.000','images/baret cream.jpeg')">Beli</button>
+</div>
+</div>
+</div>
+
+<!-- PRODUK 11 -->
+<div class="card" data-name="Baret Kostrad">
+<img src="images/baret hitua.jpeg">
+<div class="card-body">
+<h3>Baret Kostrad</h3>
+<p class="price">Rp27.000</p>
+<div class="btn-row">
+<button class="detail-btn" onclick="openDetail('Baret Kostrad','Rp27.000','images/baret hitua.jpeg','Baret dengan bahan dan kualitas premium. Menerima pemesanan satuan maupun grosir, hubungi kami')">Detail</button>
+<button class="buy-btn" onclick="openOrder('Baret Kostrad','Rp27.000','images/baret hitua.jpeg')">Beli</button>
+</div>
+</div>
+</div>
+
+<!-- PRODUK 12 -->
+<div class="card" data-name="Baret Kuning">
+<img src="images/baret kuning.jpeg">
+<div class="card-body">
+<h3>Baret Kuning</h3>
+<p class="price">Rp27.000</p>
+<div class="btn-row">
+<button class="detail-btn" onclick="openDetail('Baret Kuning','Rp27.000','images/baret kuning.jpeg','Baret dengan bahan dan kualitas premium. Menerima pemesanan satuan maupun grosir, hubungi kami')">Detail</button>
+<button class="buy-btn" onclick="openOrder('Baret Kuning','Rp27.000','images/baret kuning.jpeg')">Beli</button>
+</div>
+</div>
+</div>
+
+<!-- PRODUK 13 -->
+<div class="card" data-name="Baret Lain">
+<img src="images/baret lain.jpeg">
+<div class="card-body">
+<h3>BARET LAIN LAIN</h3>
+<p class="price">Rp27.000</p>
+<div class="btn-row">
+<button class="detail-btn" onclick="openDetail('Baret Lain','Rp27.000','images/baret lain.jpeg','Tidak menemukan baret yang anda cari? Silahkan hubungi kami untuk ketersediaan stock')">Detail</button>
+<button class="buy-btn" onclick="openOrder('Baret Lain','Rp27.000','images/baret lain.jpeg')">Beli</button>
+</div>
+</div>
+</div>
+
+<!-- PENUTUP GRID KATALOG -->
+</div>
+
+<!-- PENUTUP HALAMAN KATALOG -->
+</div>
+
+<!-- ===================================================== -->
+<!-- HALAMAN KONTAK -->
+<!-- ===================================================== -->
+
+<div id="contact" class="container hidden">
+
+<h2 style="margin-bottom:25px">Kontak Kami</h2>
+
+<div style="line-height:2;font-size:16px">
+
+<p>
+<b>WhatsApp :</b><br>
+<a href="https://wa.me/6285801281798" target="_blank">
+Chat WhatsApp
+</a>
+</p>
+
+<p>
+<b>TikTok :</b><br>
+<a href="https://tiktok.com/@rajawali9.garment" target="_blank">
+@rajawali9.garment
+</a>
+</p>
+
+<p>
+<b>Alamat Kantor :</b><br>
+Jl. Simpang Ranugrati Selatan IIIC No. 11<br>
+MALANG, Indonesia
+</p>
+
+<p>
+<b>Terimakasih karena sudah berkunjung</b>
+</p>
+
+</div>
+
+
+<!-- ===================================================== -->
+<!-- SLIDESHOW KATALOG KONTAK -->
+<!-- ===================================================== -->
+
+<div class="contact-slider">
+
+<img id="slide1" class="slide-img far">
+<img id="slide2" class="slide-img mid">
+<img id="slide3" class="slide-img center">
+<img id="slide4" class="slide-img mid">
+<img id="slide5" class="slide-img far">
+
+</div>
+
+</div>
+
+<footer>© 2026 Rajawali 9 Garment</footer>
+
+<!-- LOGIN -->
+<div class="modal" id="loginModal">
+<div class="modal-content">
+<h3>Login Owner</h3>
+
+<div class="form-row">
+<label>Username</label>
+<input type="text" id="loginUser">
+</div>
+
+<div class="form-row">
+<label>Password</label>
+<input type="password" id="loginPass">
+</div>
+
+<button class="modal-buy" onclick="loginOwner()">Login</button>
+<button class="detail-btn" onclick="closeLogin()">Batal</button>
+</div>
+</div>
+
+<!-- ADD PRODUK -->
+<div class="modal" id="addModal">
+<div class="modal-content">
+<h3>Tambah Produk</h3>
+
+<div class="form-row">
+<label>Nama</label>
+<input type="text" id="newName">
+</div>
+
+<div class="form-row">
+<label>Harga</label>
+<input type="text" id="newPrice">
+</div>
+
+<div class="form-row">
+<label>Deskripsi</label>
+<input type="text" id="newDesc">
+</div>
+
+<div class="form-row">
+<label>Upload Gambar</label>
+<input type="file" id="newImgFile">
+</div>
+
+<button class="modal-buy" onclick="addProduct()">Simpan</button>
+<button class="detail-btn" onclick="closeAdd()">Batal</button>
+</div>
+</div>
+
+
+<!-- ===================================================== -->
+<!-- MODAL DETAIL PRODUK -->
+<!-- ===================================================== -->
+
+<div class="modal" id="detailModal">
+<div class="modal-content">
+
+<img id="detailImg">
+<h3 id="detailTitle"></h3>
+<p id="detailPrice"></p>
+<p id="detailDesc" class="modal-desc"></p>
+
+<button class="detail-btn" onclick="closeDetail()">Tutup</button>
+
+</div>
+</div>
+
+
+<!-- ===================================================== -->
+<!-- MODAL PEMESANAN -->
+<!-- ===================================================== -->
+
+<div class="modal" id="orderModal">
+<div class="modal-content">
+
+<button class="close-btn" onclick="closeOrder()">✕</button>
+<img id="orderImg">
+<h3 id="orderTitle"></h3>
+<p id="orderPrice"></p>
+
+<!-- PILIH UKURAN -->
+<div class="form-row">
+<label>Pilih Ukuran</label>
+<select id="sizeSelect">
+<option>54</option>
+<option>55</option>
+<option>56</option>
+<option>57</option>
+<option>58</option>
+<option>59</option>
+<option>60</option>
+<option>61</option>
+</select>
+</div>
+
+<!-- JUMLAH PCS -->
+<div class="form-row">
+<label>Jumlah (pcs)</label>
+<input type="number" id="qtyInput" value="1" min="1">
+</div>
+
+<button class="modal-buy" onclick="sendOrder()">Pesan via WhatsApp</button>
+<br><br>
+<button class="detail-btn" onclick="closeOrder()">Batal</button>
+
+</div>
+</div>
+
+
+<!-- ===================================================== -->
+<!-- SCRIPT WEBSITE -->
+<!-- ===================================================== -->
+
+<script>
+
+// =====================================================
+// NAVIGASI HALAMAN
+// =====================================================
+
+function showPage(page){
+document.getElementById('home').classList.add('hidden');
+document.getElementById('catalog').classList.add('hidden');
+document.getElementById('contact').classList.add('hidden');
+document.getElementById(page).classList.remove('hidden');
+}
+
+// =====================================================
+// MODAL DETAIL
+// =====================================================
+
+function openDetail(title,price,img,desc){
+document.getElementById('detailTitle').innerText=title;
+document.getElementById('detailPrice').innerText=price;
+document.getElementById('detailImg').src=img;
+document.getElementById('detailDesc').innerText=desc;
+document.getElementById('detailModal').classList.add('show');
+}
+
+function closeDetail(){
+document.getElementById('detailModal').classList.remove('show');
+}
+
+// =====================================================
+// MODAL ORDER
+// =====================================================
+
+let currentProduct="";
+
+function openOrder(title,price,img){
+currentProduct=title;
+document.getElementById('orderTitle').innerText=title;
+document.getElementById('orderPrice').innerText=price;
+document.getElementById('orderImg').src=img;
+document.getElementById('orderModal').classList.add('show');
+}
+
+function closeOrder(){
+document.getElementById('orderModal').classList.remove('show');
+}
+
+// =====================================================
+// WHATSAPP
+// =====================================================
+
+function sendOrder(){
+let size=document.getElementById('sizeSelect').value;
+let qty=document.getElementById('qtyInput').value;
+let phone="6285801281798";
+
+let message=`Halo saya ingin memesan ${currentProduct}\nUkuran: ${size}\nJumlah: ${qty} pcs`;
+
+window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`);
+}
+
+// =====================================================
+// LOGIN OWNER
+// =====================================================
+
+let isOwner = false;
+
+function openLogin(){
+document.getElementById("loginModal").classList.add("show");
+}
+
+function closeLogin(){
+document.getElementById("loginModal").classList.remove("show");
+}
+
+function loginOwner(){
+
+let user = document.getElementById("loginUser").value;
+let pass = document.getElementById("loginPass").value;
+
+if(user === "owner" && pass === "fafan123"){
+
+isOwner = true;
+
+alert("Login berhasil");
+
+// tombol tambah produk
+let btn = document.createElement("button");
+btn.innerText = "+ Tambah Produk";
+btn.className = "btn";
+btn.style.marginBottom = "20px";
+btn.onclick = openAdd;
+
+document.querySelector("#catalog h2").after(btn);
+
+closeLogin();
+
+}else{
+alert("Username / Password salah");
+}
+
+}
+
+// =====================================================
+// MODAL TAMBAH PRODUK
+// =====================================================
+
+function openAdd(){
+document.getElementById("addModal").classList.add("show");
+}
+
+function closeAdd(){
+document.getElementById("addModal").classList.remove("show");
+}
+
+// =====================================================
+// TAMBAH PRODUK
+// =====================================================
+
+function addProduct(){
+
+let name = document.getElementById("newName").value;
+let price = document.getElementById("newPrice").value;
+let desc = document.getElementById("newDesc").value;
+let file = document.getElementById("newImgFile").files[0];
+
+if(!file){
+alert("Upload gambar dulu!");
+return;
+}
+
+let reader = new FileReader();
+
+reader.onload = function(e){
+
+let img = e.target.result;
+
+// simpan ke storage
+let data = localStorage.getItem("products");
+let products = data ? JSON.parse(data) : [];
+
+products.push({name,price,desc,img});
+localStorage.setItem("products", JSON.stringify(products));
+
+// tampilkan
+renderProduct({name,price,desc,img});
+
+closeAdd();
+alert("Produk berhasil disimpan!");
+
+};
+
+reader.readAsDataURL(file);
+
+}
+
+// =====================================================
+// RENDER PRODUK (BIAR GAK DOUBLE CODE)
+// =====================================================
+
+function renderProduct(p){
+
+let card = document.createElement("div");
+card.className = "card";
+
+card.innerHTML = `
+<img src="${p.img}">
+<div class="card-body">
+<h3>${p.name}</h3>
+<p class="price">${p.price}</p>
+<div class="btn-row">
+<button class="detail-btn"
+onclick="openDetail('${p.name}','${p.price}','${p.img}','${p.desc}')">
+Detail
+</button>
+
+<button class="buy-btn"
+onclick="openOrder('${p.name}','${p.price}','${p.img}')">
+Beli
+</button>
+
+${isOwner ? `
+<button class="detail-btn" onclick="editProduct(this)">Edit</button>
+<button class="detail-btn" onclick="deleteProduct(this)">Hapus</button>
+` : ``}
+
+</div>
+</div>
+`;
+
+document.querySelector(".grid").appendChild(card);
+
+}
+
+// =====================================================
+// LOAD STORAGE
+// =====================================================
+
+function loadProducts(){
+
+let data = localStorage.getItem("products");
+if(!data) return;
+
+let products = JSON.parse(data);
+
+products.forEach(p => renderProduct(p));
+
+}
+
+window.onload = loadProducts;
+
+// =====================================================
+// DELETE PRODUK
+// =====================================================
+
+function deleteProduct(btn){
+
+if(!confirm("Hapus produk ini?")) return;
+
+let card = btn.closest('.card');
+let name = card.querySelector("h3").innerText;
+
+let data = localStorage.getItem("products");
+let products = data ? JSON.parse(data) : [];
+
+products = products.filter(p => p.name !== name);
+
+localStorage.setItem("products", JSON.stringify(products));
+
+card.remove();
+
+}
+
+// =====================================================
+// EDIT PRODUK
+// =====================================================
+
+function editProduct(btn){
+
+let card = btn.closest('.card');
+let oldName = card.querySelector("h3").innerText;
+
+let data = localStorage.getItem("products");
+let products = data ? JSON.parse(data) : [];
+
+let product = products.find(p => p.name === oldName);
+if(!product) return;
+
+let newName = prompt("Nama:", product.name);
+let newPrice = prompt("Harga:", product.price);
+let newDesc = prompt("Deskripsi:", product.desc);
+
+if(!newName || !newPrice) return;
+
+product.name = newName;
+product.price = newPrice;
+product.desc = newDesc;
+
+localStorage.setItem("products", JSON.stringify(products));
+
+// update UI
+card.querySelector("h3").innerText = newName;
+card.querySelector(".price").innerText = newPrice;
+
+card.querySelector(".detail-btn").setAttribute(
+"onclick",
+`openDetail('${newName}','${newPrice}','${product.img}','${newDesc}')`
+);
+
+card.querySelector(".buy-btn").setAttribute(
+"onclick",
+`openOrder('${newName}','${newPrice}','${product.img}')`
+);
+
+alert("Produk diupdate");
+
+}
+
+// =====================================================
+// SLIDER
+// =====================================================
+
+let contactImages = [
+"images/baret biru.jpeg",
+"images/baret hijau.jpeg",
+"images/baret navy.jpeg",
+"images/baret merah.jpeg",
+"images/baret coklat.jpeg",
+"images/baret hitam.jpeg",
+"images/baret ungu.jpeg",
+"images/baret orange.jpeg",
+"images/baret maroon.jpeg",
+"images/baret cream.jpeg",
+"images/baret kuning.jpeg"
+];
+
+let contactIndex = 2;
+
+function updateContactSlider(){
+
+let img1 = (contactIndex - 2 + contactImages.length) % contactImages.length;
+let img2 = (contactIndex - 1 + contactImages.length) % contactImages.length;
+let img3 = contactIndex;
+let img4 = (contactIndex + 1) % contactImages.length;
+let img5 = (contactIndex + 2) % contactImages.length;
+
+document.getElementById("slide1").src = contactImages[img1];
+document.getElementById("slide2").src = contactImages[img2];
+document.getElementById("slide3").src = contactImages[img3];
+document.getElementById("slide4").src = contactImages[img4];
+document.getElementById("slide5").src = contactImages[img5];
+
+contactIndex++;
+if(contactIndex >= contactImages.length){
+contactIndex = 0;
+}
+
+}
+
+updateContactSlider();
+setInterval(updateContactSlider,5000);
+
+</script>
+
+</body>
+</html>
